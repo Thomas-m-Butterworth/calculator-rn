@@ -17,6 +17,7 @@ export interface CalculatorActions {
   appendDigit: (digit: string) => void;
   removeDigit: () => void;
   setOperation: (op: OperationType) => void;
+  setPercentOperation: () => void;
   calculate: () => void;
   clear: () => void;
 }

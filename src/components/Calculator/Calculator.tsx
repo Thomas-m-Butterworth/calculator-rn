@@ -9,14 +9,13 @@ import { CalculatorDisplay } from "../CalculatorDisplay";
 export const Calculator = () => {
   const {
     displayValue,
-    resetDisplayValue,
     appendDigit,
     removeDigit,
     setOperation,
     calculate,
     calculationHistory,
     clear,
-    setCalculationHistory,
+    setPercentOperation,
   } = useCalculatorStore();
 
   const buttonLayout = useButtonLayout(
@@ -25,9 +24,7 @@ export const Calculator = () => {
     setOperation,
     calculate,
     clear,
-    displayValue,
-    resetDisplayValue,
-    setCalculationHistory
+    setPercentOperation
   );
 
   const colorScheme = useColorScheme();

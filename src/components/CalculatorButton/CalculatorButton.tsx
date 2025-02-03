@@ -11,6 +11,7 @@ export const CalculatorButton = ({
   isOperation = false,
   isWide = false,
   icon,
+  testId,
 }: CalculatorButtonProps) => {
   const colorScheme = useColorScheme();
   const backgroundColor = isOperation
@@ -21,6 +22,7 @@ export const CalculatorButton = ({
     <TouchableOpacity
       onPress={onPress}
       style={[styles.button, { backgroundColor }, isWide && styles.wideButton]}
+      testID={testId}
     >
       {icon ? icon : <ButtonText label={label} isOperation={isOperation} />}
     </TouchableOpacity>

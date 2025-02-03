@@ -59,6 +59,18 @@ export const handleRemoveDigit = ({ set, get }: CalculationHandlerProps) => {
   }
 };
 
+export const handlePercentage = ({ set, get }: CalculationHandlerProps) => {
+  const { displayValue, calculationHistory } = get();
+  const num = parseFloat(displayValue);
+  const percentageResult = num / 100;
+  const percentageResultString = percentageResult.toString();
+
+  set({
+    displayValue: percentageResultString,
+    calculationHistory: [...calculationHistory, "%", percentageResultString],
+  });
+};
+
 export const handleSetOperation = ({ set, get, op }: OperatorHandlerProps) => {
   const { calculationHistory, displayValue, firstOperand, operation } = get();
   const inputValue = parseFloat(displayValue);

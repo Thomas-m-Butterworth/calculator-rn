@@ -4,7 +4,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { Colors } from "@/constants/Colors";
 import { CalculatorButtonProps } from "../components/CalculatorButton/types";
 import { OperationType } from "../store/calculatorStore/types";
-import { onPercentage } from "../utils";
 
 export const useButtonLayout = (
   appendDigit: (digit: string) => void,
@@ -12,9 +11,7 @@ export const useButtonLayout = (
   setOperation: (operation: OperationType) => void,
   calculate: () => void,
   clear: () => void,
-  displayValue: string,
-  resetDisplayValue: () => void,
-  setCalculationHistory: (num: string) => void
+  setPercentOperation: () => void
 ): CalculatorButtonProps[][] => {
   const colorScheme = useColorScheme();
   const color = Colors[colorScheme ?? "light"].buttonText;
@@ -27,47 +24,74 @@ export const useButtonLayout = (
     label: "<-",
     onPress: removeDigit,
     icon: backspaceIcon,
+    testId: "backspaceButton",
   };
 
   return [
     [
-      { label: "AC", onPress: clear, isOperation: true, isWide: true },
+      {
+        label: "AC",
+        onPress: clear,
+        isOperation: true,
+        isWide: true,
+        testId: "clearButton",
+      },
       {
         label: "%",
-        onPress: () =>
-          onPercentage({
-            displayValue,
-            setCalculationHistory,
-            resetDisplayValue,
-            appendDigit,
-          }),
+        onPress: setPercentOperation,
         isOperation: true,
+        testId: "percentButton",
       },
-      { label: "÷", onPress: () => setOperation("/"), isOperation: true },
+      {
+        label: "÷",
+        onPress: () => setOperation("/"),
+        isOperation: true,
+        testId: "divideButton",
+      },
     ],
     [
-      { label: "7", onPress: () => appendDigit("7") },
-      { label: "8", onPress: () => appendDigit("8") },
-      { label: "9", onPress: () => appendDigit("9") },
-      { label: "×", onPress: () => setOperation("*"), isOperation: true },
+      { label: "7", onPress: () => appendDigit("7"), testId: "sevenButton" },
+      { label: "8", onPress: () => appendDigit("8"), testId: "eightButton" },
+      { label: "9", onPress: () => appendDigit("9"), testId: "nineButton" },
+      {
+        label: "×",
+        onPress: () => setOperation("*"),
+        isOperation: true,
+        testId: "multiplyButton",
+      },
     ],
     [
-      { label: "4", onPress: () => appendDigit("4") },
-      { label: "5", onPress: () => appendDigit("5") },
-      { label: "6", onPress: () => appendDigit("6") },
-      { label: "-", onPress: () => setOperation("-"), isOperation: true },
+      { label: "4", onPress: () => appendDigit("4"), testId: "fourButton" },
+      { label: "5", onPress: () => appendDigit("5"), testId: "fiveButton" },
+      { label: "6", onPress: () => appendDigit("6"), testId: "sixButton" },
+      {
+        label: "-",
+        onPress: () => setOperation("-"),
+        isOperation: true,
+        testId: "subtractButton",
+      },
     ],
     [
-      { label: "1", onPress: () => appendDigit("1") },
-      { label: "2", onPress: () => appendDigit("2") },
-      { label: "3", onPress: () => appendDigit("3") },
-      { label: "+", onPress: () => setOperation("+"), isOperation: true },
+      { label: "1", onPress: () => appendDigit("1"), testId: "oneButton" },
+      { label: "2", onPress: () => appendDigit("2"), testId: "twoButton" },
+      { label: "3", onPress: () => appendDigit("3"), testId: "threeButton" },
+      {
+        label: "+",
+        onPress: () => setOperation("+"),
+        isOperation: true,
+        testId: "addButton",
+      },
     ],
     [
-      { label: "0", onPress: () => appendDigit("0") },
-      { label: ".", onPress: () => appendDigit(".") },
+      { label: "0", onPress: () => appendDigit("0"), testId: "zeroButton" },
+      { label: ".", onPress: () => appendDigit("."), testId: "decimalButton" },
       backspaceButton,
-      { label: "=", onPress: calculate, isOperation: true },
+      {
+        label: "=",
+        onPress: calculate,
+        isOperation: true,
+        testId: "equalsButton",
+      },
     ],
   ];
 };

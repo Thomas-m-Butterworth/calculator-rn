@@ -4,6 +4,7 @@ export interface CalculatorButtonProps {
   isOperation?: boolean;
   isWide?: boolean;
   icon?: React.ReactNode;
+  testId?: string;
 }
 
 export interface ButtonTextProps {

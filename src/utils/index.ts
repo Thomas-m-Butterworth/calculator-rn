@@ -17,21 +17,3 @@ export const truncateStart = (text: string, maxLength: number) => {
   const truncated = text.slice(-maxLength).replace(/^\s+/, "");
   return `...${truncated}`;
 };
-
-export const onPercentage = ({
-  displayValue,
-  setCalculationHistory,
-  resetDisplayValue,
-  appendDigit,
-}: {
-  displayValue: string;
-  setCalculationHistory: (num: string) => void;
-  resetDisplayValue: () => void;
-  appendDigit: (digit: string) => void;
-}) => {
-  const num = parseFloat(displayValue);
-  const percentageResult = num / 100;
-  setCalculationHistory("%");
-  resetDisplayValue();
-  appendDigit(percentageResult.toString());
-};
