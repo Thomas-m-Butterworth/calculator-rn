@@ -7,6 +7,7 @@ export interface CalculatorState {
   waitingForSecondOperand: boolean;
   calculationHistory: string[];
   expressionHistory: string[];
+  isExpressionComplete: boolean;
 }
 
 export interface CalculatorActions {
@@ -48,4 +49,5 @@ export const initialState: Omit<CalculatorState, "expressionHistory"> = {
   operation: null,
   waitingForSecondOperand: false,
   calculationHistory: [],
+  isExpressionComplete: false,
 };

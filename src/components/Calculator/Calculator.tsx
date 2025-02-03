@@ -31,12 +31,12 @@ export const Calculator = () => {
   const backgroundColor = Colors[colorScheme ?? "light"].background;
 
   return (
-    <View style={[styles.container, { backgroundColor }]}>
+    <View style={[styles.container, { backgroundColor }]} testID="calculator">
       <CalculatorDisplay
         displayValue={displayValue}
         calculationHistory={calculationHistory}
       />
-      <View style={styles.buttonGrid}>
+      <View style={styles.buttonGrid} testID="buttonGrid">
         {buttonLayout.map((row, rowIndex) => (
           <View key={rowIndex} style={styles.buttonRow}>
             {row.map((buttonProps, buttonIndex) => (

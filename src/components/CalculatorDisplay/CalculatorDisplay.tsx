@@ -18,12 +18,23 @@ export const CalculatorDisplay = ({
   const backgroundColor = Colors[colorScheme ?? "light"].displayBackground;
 
   return (
-    <View style={[styles.display, { backgroundColor }]}>
-      <DisplayText variant="display" numberOfLines={1}>
+    <View
+      style={[styles.display, { backgroundColor }]}
+      testID="calculatorDisplay"
+    >
+      <DisplayText
+        variant="display"
+        numberOfLines={1}
+        testID="calculatorDisplayText"
+      >
         {displayValue}
       </DisplayText>
       {calculationHistory.length > 0 && (
-        <DisplayText variant="history" numberOfLines={2}>
+        <DisplayText
+          variant="history"
+          numberOfLines={2}
+          testID="calculatorHistoryText"
+        >
           {truncateStart(formatHistory(calculationHistory), 58)}
         </DisplayText>
       )}

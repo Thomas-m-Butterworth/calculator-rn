@@ -21,11 +21,25 @@ export const handleResetCalculationHistory = ({ set }: HandlerProps) =>
   set({ calculationHistory: [] });
 
 export const handleAppendDigit = ({ set, get, num }: NumberHandlerProps) => {
-  const { displayValue, waitingForSecondOperand, calculationHistory } = get();
+  const {
+    displayValue,
+    waitingForSecondOperand,
+    calculationHistory,
+    isExpressionComplete,
+  } = get();
   const emptyDisplay = displayValue === "0";
 
   const updatedDisplay = emptyDisplay ? num : displayValue + num;
   const updatedHistory = [...calculationHistory, num];
+
+  if (isExpressionComplete) {
+    set({
+      displayValue: num,
+      isExpressionComplete: false,
+      calculationHistory: updatedHistory,
+    });
+    return;
+  }
 
   if (waitingForSecondOperand) {
     set({
@@ -128,6 +142,7 @@ export const handleCalculate = ({ set, get }: CalculationHandlerProps) => {
     waitingForSecondOperand: false,
     calculationHistory: [],
     expressionHistory: [...expressionHistory, resultExpressionString],
+    isExpressionComplete: true,
   });
 };
 
