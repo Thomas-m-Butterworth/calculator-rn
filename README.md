@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+# React Native Calculator App
+Thomas Butterworth
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## What It It?
+A simple calculator app f
 
-## Get started
+## Stack
+* React Native
+* Expo
+* Zustand (State Management)
+* Jest (Testing)
+* ESLint
 
-1. Install dependencies
+## Features
+* Colour scheme responds the the user's system settings (dark and light mode).
+* Calculation history within the display.
+* Persistent state storage so user's can keep active calculations (and history) between sessions
+* Expression history - a seperate tab for previous calculations by the user.
 
-   ```bash
-   npm install
-   ```
+## Limitations
+* Negative Values
+   * The user is able to start their calculation with a negative number, but not within the rest of the calculation
+* User can only control colour scheme with their phone's system settings
+* No means of using parenthesis for more advanced equations
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Nice to Haves in the Future
+* More testing
+   * Utils are tested but more frontend testing would be beneficial
+      * Started the process with `testId` setting.
+* Make use of unused state functions
+   * Quite a few `set` handlers that aren't used since a lot of setting is done within the `SetState` object in zustand. These handlers would be useful if ever scaling the app to allow more user actions.
+* `Require cycle: src/hooks/index.ts -> src/hooks/useThemeColor.ts -> src/hooks/index.ts`
+   * Not breaking, but would be good to refactor out
+   

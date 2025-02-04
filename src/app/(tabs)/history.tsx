@@ -11,12 +11,19 @@ import { Colors } from "@/constants/Colors";
 import { PageContainer, TitleText } from "@/src/components/ui";
 import { useCalculatorStore } from "@/src/store";
 
-export const Expression = ({ exp }: { exp: string }) => {
+export const Expression = ({
+  exp,
+  testId,
+}: {
+  exp: string;
+  testId: string;
+}) => {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme ?? "light"];
   return (
     <View
       style={[styles.expression, { backgroundColor: theme.displayBackground }]}
+      testID={testId}
     >
       <Text style={[styles.expressionText, { color: theme.text }]}>{exp}</Text>
     </View>
@@ -29,8 +36,15 @@ export const HistoryList = () => {
     <View style={{ flex: 1 }}>
       <FlatList
         data={expressionHistory}
-        renderItem={({ item }) => <Expression exp={item} />}
+        renderItem={({ item, index }) => (
+          <Expression
+            exp={item}
+            key={`expression-${index}`}
+            testId={`expression-${index}`}
+          />
+        )}
         style={styles.expressionList}
+        testID="historyList"
       />
     </View>
   );
@@ -39,7 +53,7 @@ export const HistoryList = () => {
 export default function HistoryScreen() {
   return (
     <PageContainer>
-      <TitleText>History</TitleText>
+      <TitleText testId={"historyTitle"}>History</TitleText>
       <HistoryList />
     </PageContainer>
   );

@@ -40,7 +40,11 @@ export const Calculator = () => {
         {buttonLayout.map((row, rowIndex) => (
           <View key={rowIndex} style={styles.buttonRow}>
             {row.map((buttonProps, buttonIndex) => (
-              <CalculatorButton key={buttonIndex} {...buttonProps} />
+              <CalculatorButton
+                key={buttonIndex}
+                {...buttonProps}
+                testId={`calc-button-${buttonIndex}`}
+              />
             ))}
           </View>
         ))}
