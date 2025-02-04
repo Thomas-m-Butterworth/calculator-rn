@@ -5,13 +5,16 @@ import { useColorScheme } from "@/src/hooks/useColorScheme";
 
 export const EmptyHistoryList = () => {
   const colorScheme = useColorScheme();
-  const backgroundColor = Colors[colorScheme ?? "light"].displayBackground;
+  const theme = Colors[colorScheme ?? "light"];
   return (
     <View
-      style={[styles.emptyContainer, { backgroundColor }]}
+      style={[
+        styles.emptyContainer,
+        { backgroundColor: theme.displayBackground },
+      ]}
       testID="emptyHistoryList"
     >
-      <Text style={styles.emptyTitle}>
+      <Text style={[styles.emptyTitle, { color: theme.text }]}>
         You've not completed any calculations yet
       </Text>
     </View>
@@ -22,15 +25,14 @@ const styles = StyleSheet.create({
   emptyContainer: {
     borderRadius: 12,
     margin: 18,
-    justifyContent: "center",
-    alignItems: "center",
   },
   emptyTitle: {
-    fontSize: 24,
-    fontFamily: "SpaceMono",
+    fontSize: 20,
     lineHeight: 22,
+    fontFamily: "SpaceMono",
     textAlign: "center",
-    padding: 16,
+    padding: 18,
+    paddingTop: 22,
     fontWeight: "600",
   },
 });
