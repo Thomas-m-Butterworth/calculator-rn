@@ -3,11 +3,26 @@ import { Platform, SafeAreaView, StyleSheet } from "react-native";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/src/hooks";
 
-export const PageContainer = ({ children }: { children: ReactNode }) => {
+export const PageContainer = ({
+  children,
+  isHeaderEnabled,
+}: {
+  children: ReactNode;
+  isHeaderEnabled?: boolean;
+}) => {
   const colorScheme = useColorScheme();
   const backgroundColor = Colors[colorScheme ?? "light"].background;
+
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor }]}>
+    <SafeAreaView
+      style={[
+        styles.container,
+        {
+          backgroundColor,
+          paddingTop: isHeaderEnabled ? 12 : styles.container.paddingTop,
+        },
+      ]}
+    >
       {children}
     </SafeAreaView>
   );
