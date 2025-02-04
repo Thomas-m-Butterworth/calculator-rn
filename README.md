@@ -28,6 +28,7 @@ A simple, user-friendly calculator app built with React Native. It supports basi
 🔹 **Optimize State Management** – Some `set` functions in Zustand remain unused but could support future app scaling - these have however proved useful in debugging.
 🔹 **Fix Require Cycle Warning** – `src/hooks/index.ts -> src/hooks/useThemeColor.ts -> src/hooks/index.ts` is not breaking but should be refactored.  
 🔹 **Improve Mocking** - `expo-fonts` etc. can be mocked in a config file to avoid mocking it in every front end test.
+🔹 **Refactor Page Container** - Platform specific padding fixes cross-platform spacing issue (content going behind the header when enabled) without a header, but creates issues when the header is enabled. refactor page container to acknowlege if a enabled is enabled. 
 
 ## Assumptions  
 - Users will perform both integer arithmetic and floating-point calculations. (It is very difficult to use a calculator without encountering a decimal point)
