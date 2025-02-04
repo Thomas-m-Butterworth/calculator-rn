@@ -1,5 +1,5 @@
 export interface CalculatorButtonProps {
-  label?: string;
+  label: string;
   onPress: () => void;
   isOperation?: boolean;
   isWide?: boolean;
