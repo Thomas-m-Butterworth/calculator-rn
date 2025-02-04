@@ -6,7 +6,7 @@ import { ButtonText } from "./ButtonText";
 import { CalculatorButtonProps } from "./types";
 
 export const CalculatorButton = ({
-  label = "",
+  label,
   onPress,
   isOperation = false,
   isWide = false,
