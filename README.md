@@ -27,6 +27,7 @@ A simple, user-friendly calculator app built with React Native. It supports basi
 🔹 **More Testing** – While utility functions are covered, UI and interaction tests need improvement (testID usage has been initiated).  
 🔹 **Optimize State Management** – Some `set` functions in Zustand remain unused but could support future app scaling - these have however proved useful in debugging.
 🔹 **Fix Require Cycle Warning** – `src/hooks/index.ts -> src/hooks/useThemeColor.ts -> src/hooks/index.ts` is not breaking but should be refactored.  
+🔹 **Improve Mocking** - `expo-fonts` etc. can be mocked in a config file to avoid mocking it in every front end test.
 
 ## Assumptions  
 - Users will perform both integer arithmetic and floating-point calculations. (It is very difficult to use a calculator without encountering a decimal point)
@@ -36,8 +37,8 @@ A simple, user-friendly calculator app built with React Native. It supports basi
 ## Running the App  
 ### **1. Clone the Repository**  
 ```sh
-git clone https://github.com/yourusername/react-native-calculator.git
-cd react-native-calculator
+git clone https://github.com/thomas-m-butterworth/calculator-rn.git
+cd calculator-rn
 ```
 
 ### **2. Install Dependencies**
