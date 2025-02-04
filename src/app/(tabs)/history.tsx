@@ -30,6 +30,21 @@ export const Expression = ({
   );
 };
 
+export const EmptyHistoryList = () => {
+  const colorScheme = useColorScheme();
+  const backgroundColor = Colors[colorScheme ?? "light"].displayBackground;
+  return (
+    <View
+      style={[styles.emptyContainer, { backgroundColor }]}
+      testID="emptyHistoryList"
+    >
+      <Text style={styles.emptyTitle}>
+        You've not completed any calculations yet
+      </Text>
+    </View>
+  );
+};
+
 export const HistoryList = () => {
   const { expressionHistory } = useCalculatorStore();
   return (
@@ -44,6 +59,7 @@ export const HistoryList = () => {
           />
         )}
         style={styles.expressionList}
+        ListEmptyComponent={<EmptyHistoryList />}
         testID="historyList"
       />
     </View>
@@ -75,5 +91,19 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: Platform.OS === "ios" ? 50 : 0,
     marginTop: 8,
+  },
+  emptyContainer: {
+    borderRadius: 12,
+    margin: 18,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  emptyTitle: {
+    fontSize: 24,
+    fontFamily: "SpaceMono",
+    lineHeight: 22,
+    textAlign: "center",
+    padding: 16,
+    fontWeight: "600",
   },
 });
