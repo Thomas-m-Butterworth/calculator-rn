@@ -1,4 +1,4 @@
-import { formatHistory, isLastEntryOperator } from "@/src/utils";
+import { formatExpression, isLastEntryOperator } from "@/src/utils";
 import {
   CalculationHandlerProps,
   HandlerProps,
@@ -86,10 +86,29 @@ export const handlePercentage = ({ set, get }: CalculationHandlerProps) => {
 };
 
 export const handleSetOperation = ({ set, get, op }: OperatorHandlerProps) => {
-  const { calculationHistory, displayValue, firstOperand, operation } = get();
+  const {
+    calculationHistory,
+    displayValue,
+    firstOperand,
+    operation,
+    isExpressionComplete,
+  } = get();
   const inputValue = parseFloat(displayValue);
 
-  if (inputValue === 0) return;
+  if (displayValue === "0" && op === "-") {
+    set({
+      displayValue: "-",
+      calculationHistory: [...calculationHistory, "-"],
+    });
+    return;
+  }
+
+  if (
+    displayValue === "-" ||
+    (displayValue === "0" && op !== "-") ||
+    isExpressionComplete
+  )
+    return;
   if (isLastEntryOperator(calculationHistory)) return;
 
   if (firstOperand === null) {
@@ -113,7 +132,7 @@ export const handleSetOperation = ({ set, get, op }: OperatorHandlerProps) => {
 
 export const createExpressionString = (history: string[], result: string) => {
   const newExpression = [...history, "=", result];
-  const expressionString = formatHistory(newExpression);
+  const expressionString = formatExpression(newExpression);
   return expressionString;
 };
 
@@ -141,7 +160,7 @@ export const handleCalculate = ({ set, get }: CalculationHandlerProps) => {
     operation: null,
     waitingForSecondOperand: false,
     calculationHistory: [],
-    expressionHistory: [...expressionHistory, resultExpressionString],
+    expressionHistory: [resultExpressionString, ...expressionHistory],
     isExpressionComplete: true,
   });
 };

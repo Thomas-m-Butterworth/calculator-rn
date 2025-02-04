@@ -12,6 +12,15 @@ export const formatHistory = (history: string[]) => {
   return formattedHistory;
 };
 
+export const formatExpression = (history: string[]) => {
+  const formattedHistory = formatHistory(history);
+  const formattedExpression = formattedHistory.replace(
+    /=\s+([-+x÷%])\s+/g,
+    "= $1"
+  );
+  return formattedExpression;
+};
+
 export const truncateStart = (text: string, maxLength: number) => {
   if (text.length <= maxLength) return text;
   const truncated = text.slice(-maxLength).replace(/^\s+/, "");
