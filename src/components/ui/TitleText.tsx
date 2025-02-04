@@ -8,12 +8,12 @@ export const TitleText = ({ ...props }): ReactNode => {
   const theme = Colors[colorScheme ?? "light"];
 
   return (
-    <View style={[{ backgroundColor: theme.operationButton }]}>
+    <View style={[{ backgroundColor: theme.displayBackground }]}>
       <Text
         style={[
           styles.titleText,
           {
-            color: theme.operationButtonText,
+            color: theme.displayText,
           },
           props.style,
         ]}
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 600,
     textAlign: "center",
-    margin: 8,
+    marginBottom: 8,
+    padding: 12,
   },
 });
