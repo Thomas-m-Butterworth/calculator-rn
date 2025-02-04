@@ -1,0 +1,1412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator should render as expected 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 12,
+      },
+      {
+        "backgroundColor": "#E3F2FD",
+      },
+    ]
+  }
+  testID="calculator"
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "flex-end",
+          "borderRadius": 16,
+          "height": 170,
+          "justifyContent": "flex-end",
+          "marginTop": 18,
+          "padding": 16,
+        },
+        {
+          "backgroundColor": "#FFFFFF",
+        },
+      ]
+    }
+    testID="calculatorDisplay"
+  >
+    <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={1}
+      style={
+        [
+          {
+            "fontFamily": "SpaceMono",
+            "fontSize": 48,
+            "fontWeight": "600",
+          },
+          {
+            "color": "#263238",
+          },
+          undefined,
+        ]
+      }
+      testID="calculatorDisplayText"
+    >
+      123
+    </Text>
+    <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={2}
+      style={
+        [
+          {
+            "fontFamily": "SpaceMono",
+            "fontSize": 20,
+            "letterSpacing": -0.5,
+            "position": "absolute",
+            "right": 16,
+            "textAlign": "right",
+            "top": 16,
+          },
+          {
+            "color": "#666666",
+          },
+          undefined,
+        ]
+      }
+      testID="calculatorHistoryText"
+    >
+      12 + 10
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "gap": 12,
+        "justifyContent": "center",
+      }
+    }
+    testID="buttonGrid"
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 12,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 2,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 2,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-0"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          AC
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-1"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          %
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-2"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          ÷
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 12,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-0"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          7
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-1"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          8
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-2"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          9
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-3"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          ×
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 12,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-0"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          4
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-1"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          5
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-2"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          6
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-3"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          -
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 12,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-0"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          1
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-1"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          2
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-2"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          3
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-3"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          +
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 12,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-0"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          0
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-1"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              false,
+            ]
+          }
+        >
+          .
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-2"
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            [
+              {
+                "color": "#37474F",
+                "fontSize": 32,
+              },
+              undefined,
+              {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "aspectRatio": 1,
+            "backgroundColor": "#FF6F00",
+            "borderRadius": 16,
+            "elevation": 3,
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          }
+        }
+        testID="calc-button-3"
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "fontWeight": "600",
+              },
+              {
+                "color": "#000",
+              },
+              {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          =
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
