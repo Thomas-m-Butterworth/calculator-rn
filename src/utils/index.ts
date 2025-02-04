@@ -26,3 +26,9 @@ export const truncateStart = (text: string, maxLength: number) => {
   const truncated = text.slice(-maxLength).replace(/^\s+/, "");
   return `...${truncated}`;
 };
+
+export const createExpressionSring = (history: string[], result: string) => {
+  const newExpression = [...history, "=", result];
+  const expressionString = formatExpression(newExpression);
+  return expressionString;
+};

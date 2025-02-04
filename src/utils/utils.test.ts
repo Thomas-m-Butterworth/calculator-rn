@@ -1,4 +1,10 @@
-import { formatHistory, truncateStart } from ".";
+import {
+  createExpressionSring,
+  formatExpression,
+  formatHistory,
+  isLastEntryOperator,
+  truncateStart,
+} from ".";
 
 describe("formatHistory", () => {
   it("replaces instances of * with X", () => {
@@ -63,5 +69,38 @@ describe("truncateStart", () => {
   });
   it("removes whitespace from the start of a truncated string", () => {
     expect(truncateStart("               f", 5)).toBe("...f");
+  });
+});
+
+describe("formatExpression", () => {
+  it("removes whitespace from expression results", () => {
+    const minusExpression = ["1", "-", "2", "=", "-", "1"];
+    const minusExpressionString = "1 - 2 = -1";
+    expect(formatExpression(minusExpression)).toBe(minusExpressionString);
+  });
+  it("returns a standard formatted history when no operators are in the results", () => {
+    const minusExpression = ["2", "-", "1", "=", "1"];
+    const minusExpressionString = "2 - 1 = 1";
+    expect(formatExpression(minusExpression)).toBe(minusExpressionString);
+  });
+});
+
+describe("createExpressionString", () => {
+  it("creates an expression string from user calculations", () => {
+    const historyArr = ["2", "0", "+", "25"];
+    const resultString = "45";
+    const expString = "20 + 25 = 45";
+    expect(createExpressionSring(historyArr, resultString)).toBe(expString);
+  });
+});
+
+describe("isLastEntryOperator", () => {
+  it("returns true when last entry in the array is an operator", () => {
+    expect(isLastEntryOperator(["1", "5", "%"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "x"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "="])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "+"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "-"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5"])).toBeFalsy();
   });
 });

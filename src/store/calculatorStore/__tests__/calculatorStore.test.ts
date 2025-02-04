@@ -1,12 +1,5 @@
 import { CalculatorState, CalculatorStoreType, initialState } from "../types";
 
-jest.mock("@react-native-async-storage/async-storage", () => ({
-  getItem: jest.fn(() => Promise.resolve(null)),
-  setItem: jest.fn(() => Promise.resolve()),
-  removeItem: jest.fn(() => Promise.resolve()),
-  clear: jest.fn(() => Promise.resolve()),
-}));
-
 type MockStore = CalculatorStoreType & {
   setState: (updates: Partial<CalculatorState>) => void;
   getState: () => MockStore;
@@ -17,22 +10,28 @@ jest.mock("../calculatorStore", () => ({
 }));
 
 describe("Calculator Store", () => {
-  const mockStore: MockStore = {
-    ...initialState,
-    expressionHistory: [],
-    appendDigit: jest.fn(),
-    setOperation: jest.fn(),
-    clear: jest.fn(),
-    calculate: jest.fn(),
-    removeDigit: jest.fn(),
-    setCalculationHistory: jest.fn(),
-    resetCalculationHistory: jest.fn(),
-    setExpressionHistory: jest.fn(),
-    setState: jest.fn((updates: Partial<CalculatorState>) => {
-      Object.assign(mockStore, updates);
-    }),
-    getState: jest.fn(() => mockStore),
-  };
+  let mockStore: MockStore;
+
+  beforeEach(() => {
+    mockStore = {
+      ...initialState,
+      resetDisplayValue: jest.fn(),
+      expressionHistory: [],
+      appendDigit: jest.fn(),
+      setOperation: jest.fn(),
+      clear: jest.fn(),
+      calculate: jest.fn(),
+      removeDigit: jest.fn(),
+      setCalculationHistory: jest.fn(),
+      resetCalculationHistory: jest.fn(),
+      setExpressionHistory: jest.fn(),
+      setPercentOperation: jest.fn(),
+      setState: jest.fn((updates: Partial<CalculatorState>) => {
+        Object.assign(mockStore, updates);
+      }),
+      getState: jest.fn(() => mockStore),
+    };
+  });
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -53,21 +52,52 @@ describe("Calculator Store", () => {
     expect(mockStore.calculationHistory).toEqual(["1"]);
   });
 
-  it("should handle operation", () => {
-    mockStore.displayValue = "1";
-    mockStore.calculationHistory = ["1"];
+  describe("handleSetOperation", () => {
     const { handleSetOperation } = require("../handlers");
 
-    handleSetOperation({
-      set: mockStore.setState,
-      get: mockStore.getState,
-      op: "+",
+    it("should allow negative sign at the start of a calculation", () => {
+      mockStore.displayValue = "0";
+      mockStore.calculationHistory = [];
+
+      handleSetOperation({
+        set: mockStore.setState,
+        get: mockStore.getState,
+        op: "-",
+      });
+
+      expect(mockStore.displayValue).toBe("-");
+      expect(mockStore.calculationHistory).toEqual(["-"]);
     });
 
-    expect(mockStore.operation).toBe("+");
-    expect(mockStore.waitingForSecondOperand).toBe(true);
-    expect(mockStore.firstOperand).toBe(1);
-    expect(mockStore.calculationHistory).toEqual(["1", "+"]);
+    it("should not allow multiple negative signs", () => {
+      mockStore.displayValue = "-";
+      mockStore.calculationHistory = ["-"];
+
+      handleSetOperation({
+        set: mockStore.setState,
+        get: mockStore.getState,
+        op: "-",
+      });
+
+      expect(mockStore.displayValue).toBe("-");
+      expect(mockStore.calculationHistory).toEqual(["-"]);
+    });
+
+    it("should handle normal operation selection", () => {
+      mockStore.displayValue = "5";
+      mockStore.calculationHistory = ["5"];
+
+      handleSetOperation({
+        set: mockStore.setState,
+        get: mockStore.getState,
+        op: "+",
+      });
+
+      expect(mockStore.operation).toBe("+");
+      expect(mockStore.waitingForSecondOperand).toBe(true);
+      expect(mockStore.firstOperand).toBe(5);
+      expect(mockStore.calculationHistory).toEqual(["5", "+"]);
+    });
   });
 
   it("should clear the calculator state", () => {
