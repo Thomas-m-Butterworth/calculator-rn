@@ -8,7 +8,6 @@ export const handleAppendDigit = ({ set, get, num }: NumberHandlerProps) => {
     isExpressionComplete,
   } = get();
   const emptyDisplay = displayValue === "0";
-
   const updatedDisplay = emptyDisplay ? num : displayValue + num;
   const updatedHistory = [...calculationHistory, num];
 

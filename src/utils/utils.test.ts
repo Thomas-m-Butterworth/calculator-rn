@@ -96,8 +96,8 @@ describe("createExpressionString", () => {
 
 describe("isLastEntryOperator", () => {
   it("returns true when last entry in the array is an operator", () => {
-    expect(isLastEntryOperator(["1", "5", "%"])).toBeTruthy();
-    expect(isLastEntryOperator(["1", "5", "x"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "/"])).toBeTruthy();
+    expect(isLastEntryOperator(["1", "5", "*"])).toBeTruthy();
     expect(isLastEntryOperator(["1", "5", "="])).toBeTruthy();
     expect(isLastEntryOperator(["1", "5", "+"])).toBeTruthy();
     expect(isLastEntryOperator(["1", "5", "-"])).toBeTruthy();

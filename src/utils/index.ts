@@ -1,4 +1,4 @@
-const operators = new Set(["+", "÷", "%", "=", "-", "x"]);
+const operators = new Set(["+", "/", "%", "=", "-", "*"]);
 
 export const isLastEntryOperator = (arr: string[]) =>
   operators.has(arr.at(-1) ?? "");
